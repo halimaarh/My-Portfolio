@@ -1,0 +1,103 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 170px;
+}
+.nav-logo {
+  width: 135px; /* Adjust the width for the desired size */
+  height: auto;
+  margin-right: 20px; /* Add space between logo and menu */
+  transition: transform 0.3s ease; /* Adds a smooth transition for hover effects */
+}
+.theme {
+  position: absolute;
+  top: 45px; /* Adjust position to keep theme behind logo */
+  left: 200px;
+  width: 100px; /* Increase size slightly for background effect */
+  height: auto;
+  z-index: -1;
+  opacity: 0.6;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+.nav-connect {
+  padding: 20px 20px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #293996, #02b5f3);
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-mob-close {
+  display: none;
+}
+.nav-mob-open {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar {
+    margin: 5px 50px;
+  }
+  .theme {
+    position: absolute;
+    left: 80px;
+    width: 95px;
+  }
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 130px;
+    width: 30px;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    gap: 30px;
+    background-color: #1a3e65;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 10px;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
